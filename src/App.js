@@ -43,7 +43,7 @@ function App() {
     
   }
   const deleteHandler = (id)=>{
-    console.log(id,'id');
+    // console.log(id,'id');
 
   }
   useEffect(() => {
@@ -51,7 +51,7 @@ function App() {
     const retriveContacts = JSON.parse(localStorage.getItem(LOCALSTORAGEKEY))
     if(retriveContacts) setContacts(retriveContacts);
   }, [])
-  
+
   useEffect(() => {
     console.log('useEffect with array')
     localStorage.setItem(LOCALSTORAGEKEY,JSON.stringify(contacts))
