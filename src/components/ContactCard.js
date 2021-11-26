@@ -1,6 +1,10 @@
 import React from 'react'
 
 const ContactCard = (props) =>{
+    
+    const deletionHandler = (e)=>{
+        props.deleteHandler(e.target.id);
+    }
     console.log(props)
     const {contact} = props
     return(
@@ -10,7 +14,7 @@ const ContactCard = (props) =>{
                     {contact.name}
                 </div>
                 <div>{contact.email}</div>
-                <i className='btn btn-danger'>delete</i>
+                <i className='btn btn-danger' onClick={deletionHandler} id={contact.id}>delete</i>
             </div>
         </div>
     )
